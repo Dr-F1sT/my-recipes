@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарная Книга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Кулинарная Книга</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Поиск рецепта по названию...">
+        </div>
+        <nav>
+            <button class="nav-btn" data-target="home">Все рецепты</button>
+            <!-- Кнопки для быстрого перехода -->
+            <button class="nav-btn recipe-link" data-target="chicken">Курица</button>
+            <button class="nav-btn recipe-link" data-target="olivier">Оливье</button>
+            <button class="nav-btn recipe-link" data-target="pelmeni">Пельмени</button>
+            <button class="nav-btn recipe-link" data-target="goulash">Гуляш</button>
+            <button class="nav-btn recipe-link" data-target="syrniki">Сырники</button>
+            <button class="nav-btn recipe-link" data-target="carbonara">Карбонара</button>
+        </nav>
+    </header>
+
+    <!-- Главная страница (Список рецептов) -->
+    <main id="home" class="page active">
+        <h2>Все рецепты</h2>
+        
+        <div class="recipe-grid" id="recipeList">
+            
+            <!-- Карточка 1 -->
+            <div class="recipe-card" data-name="Курица в кисло-сладком соусе" onclick="document.querySelector('[data-target=\'chicken\']').click()">
+                <img src="images/chicken.jpg" alt="Курица">
+                <div class="card-info">
+                    <h3>Курица в кисло-сладком соусе</h3>
+                    <p>Классика китайской кухни</p>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="recipe-card" data-name="Классический оливье" onclick="document.querySelector('[data-target=\'olivier\']').click()">
+                <img src="images/olivier.jpg" alt="Оливье">
+                <div class="card-info">
+                    <h3>Классический оливье</h3>
+                    <p>Любимый всеми салат</p>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="recipe-card" data-name="Домашние пельмени" onclick="document.querySelector('[data-target=\'pelmeni\']').click()">
+                <img src="images/pelmeni.jpg" alt="Пельмени">
+                <div class="card-info">
+                    <h3>Домашние пельмени</h3>
+                    <p>Сочные и ароматные</p>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="recipe-card" data-name="Гуляш как в столовке" onclick="document.querySelector('[data-target=\'goulash\']').click()">
+                <img src="images/goulash.jpg" alt="Гуляш">
+                <div class="card-info">
+                    <h3>Гуляш «как в столовке»</h3>
+                    <p>Сытное второе блюдо</p>
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="recipe-card" data-name="Сырники" onclick="document.querySelector('[data-target=\'syrniki\']').click()">
+                <img src="images/syrniki.jpg" alt="Сырники">
+                <div class="card-info">
+                    <h3>Сырники</h3>
+                    <p>Нежный завтрак</p>
+                </div>
+            </div>
+
+            <!-- Карточка 6 -->
+            <div class="recipe-card" data-name="Карбонара" onclick="document.querySelector('[data-target=\'carbonara\']').click()">
+                <img src="images/carbonara.jpg" alt="Карбонара">
+                <div class="card-info">
+                    <h3>Карбонара</h3>
+                    <p>Упрощённая, без сливок</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- СТРАНИЦЫ РЕЦЕПТОВ -->
+    
+    <!-- Рецепт 1 -->
+    <main id="chicken" class="page">
+        <div class="recipe-container">
+            <div class="recipe-image"><img src="images/chicken.jpg" alt="Курица"></div>
+            <div class="recipe-content">
+                <h2>Курица в кисло-сладком соусе</h2>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>1 кг куриного мяса</li>
+                    <li>2 больших сладких перца</li>
+                    <li>репчатый лук</li>
+                    <li>250 г длиннозерного риса</li>
+                    <li>по 0,5 ч. л. соли, чеснока, имбиря</li>
+                    <li>25 мл уксуса 6%-го</li>
+                    <li>75 мл соевого соуса</li>
+                    <li>50 г меда</li>
+                    <li>25 г кетчупа</li>
+                    <li>25 г вустерского соуса</li>
+                    <li>25 мл кунжутного масла</li>
+                    <li>1,5 ст. л. кукурузного крахмала</li>
+                </ul>
+                <h3>Приготовление:</h3>
+                <p>Режем курицу на небольшие кусочки и жарим до золотистой корочки на растительном масле. Перец и лук нарезаем кубиками, чеснок и имбирь натираем на мелкой терке.</p>
+                <p>Для соуса смешиваем мед, уксус, кунжутное масло, кетчуп, соевый и вустерский соусы и немного воды. Смешиваем и высыпаем кукурузный крахмал.</p>
+                <p>Обжариваем перец и лук до мягкости, добавляем имбирь и чеснок. Перекладываем овощи к мясу и поливаем соусом. Пару минут тушим и выключаем. Отвариваем рис.</p>
+                <button class="back-btn nav-btn" data-target="home">← Назад</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Рецепт 2 -->
+    <main id="olivier" class="page">
+        <div class="recipe-container">
+            <div class="recipe-image"><img src="images/olivier.jpg" alt="Оливье"></div>
+            <div class="recipe-content">
+                <h2>Классический оливье</h2>
+                <h3>Ингредиенты (на 2-литровую миску):</h3>
+                <ul>
+                    <li>колбаса 500 г</li>
+                    <li>картошка 400 г, морковь 200 г</li>
+                    <li>горошек 300 г, 6 яиц</li>
+                    <li>солёные огурцы 200 г, майонез 200 г</li>
+                    <li>соль, перец, зелень</li>
+                    <li><em>Варианты: с курицей (~500 г) или с говядиной (500 г + лаврушка, лук, душистый перец)</em></li>
+                </ul>
+                <h3>Приготовление:</h3>
+                <p>Овощи и яйца отварите, остудите и почистите — яйца сразу опустите в холодную воду, чтобы легко чистились. Всё, включая огурцы, нарежьте кубиками одного размера (~4 мм).</p>
+                <p>Курицу в фольге варите 5 минут после закипания и оставьте в горячей воде на 40–50 минут; говядину варите 1,5 часа с лавровым листом, перцем и луком.</p>
+                <p>Смешайте всё с майонезом и горошком, при необходимости добавьте специи и дайте салату постоять в холодильнике.</p>
+                <button class="back-btn nav-btn" data-target="home">← Назад</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Рецепт 3 -->
+    <main id="pelmeni" class="page">
+        <div class="recipe-container">
+            <div class="recipe-image"><img src="images/pelmeni.jpg" alt="Пельмени"></div>
+            <div class="recipe-content">
+                <h2>Домашние пельмени</h2>
+                <h3>Ингредиенты (на 120 шт. диаметром 5,5 см):</h3>
+                <ul>
+                    <li>3 яйца, 7 желтков</li>
+                    <li>50 мл растительного или оливкового масла</li>
+                    <li>1 ч. л. соли, 500 г муки</li>
+                    <li>начинка — по 300 г говяжьего и индюшачьего/куриного фарша, 300 г лука</li>
+                </ul>
+                <h3>Приготовление:</h3>
+                <p>Яйца, желтки, масло и соль смешайте, всыпьте муку и замесите. Тесто заверните в плёнку на 10–15 минут, потом домесите руками — повторите так 2–3 раза, чтобы не месить слишком долго.</p>
+                <p>Для начинки соедините два фарша с измельчённым луком (его можно заменить водой), посолите, поперчите.</p>
+                <p>Раскатайте тесто, слепите пельмени, посыпьте мукой и заморозьте либо варите сразу.</p>
+                <button class="back-btn nav-btn" data-target="home">← Назад</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Рецепт 4 -->
+    <main id="goulash" class="page">
+        <div class="recipe-container">
+            <div class="recipe-image"><img src="images/goulash.jpg" alt="Гуляш"></div>
+            <div class="recipe-content">
+                <h2>Гуляш «как в столовке»</h2>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>мясо 1 кг</li>
+                    <li>лук 1 кг</li>
+                    <li>сметана 500 г</li>
+                    <li>чеснок 1 головка</li>
+                    <li>томатная паста 100 г (2 ст. л.)</li>
+                    <li>мука 2 ст. л.</li>
+                    <li>лавровый лист 1 шт., душистый перец 4 горошины</li>
+                    <li>соль и перец по 1 ч. л.</li>
+                    <li><em>Гарнир — рис, макароны, пюре или картошка</em></li>
+                </ul>
+                <h3>Приготовление:</h3>
+                <p>Мясо обжарьте порциями до корочки, добавьте лук и тушите до мягкости. Всыпьте муку, перемешайте, добавьте томатную пасту, специи и горячую воду, чтобы мясо было почти покрыто.</p>
+                <p>Тушите под крышкой около часа на слабом огне, в конце введите сметану с чесноком и прогрейте пару минут, не доводя до кипения.</p>
+                <button class="back-btn nav-btn" data-target="home">← Назад</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Рецепт 5 -->
+    <main id="syrniki" class="page">
+        <div class="recipe-container">
+            <div class="recipe-image"><img src="images/syrniki.jpg" alt="Сырники"></div>
+            <div class="recipe-content">
+                <h2>Сырники</h2>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>творог 400 г</li>
+                    <li>1 яйцо</li>
+                    <li>манка 2 ст. л.</li>
+                    <li>сахар, соль, ванилин по вкусу</li>
+                </ul>
+                <h3>Приготовление:</h3>
+                <p>Творог разомните вилкой, смешайте с яйцом, манкой, сахаром и щепоткой соли. Дайте массе постоять 15–20 минут, чтобы манка набухла и забрала лишнюю влагу.</p>
+                <p>Сформируйте сырники, обваляйте в муке и жарьте на среднем огне до румяной корочки с двух сторон. Подавайте со сметаной или вареньем.</p>
+                <button class="back-btn nav-btn" data-target="home">← Назад</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Рецепт 6 -->
+    <main id="carbonara" class="page">
+        <div class="recipe-container">
+            <div class="recipe-image"><img src="images/carbonara.jpg" alt="Карбонара"></div>
+            <div class="recipe-content">
+                <h2>Карбонара (упрощённая, без сливок)</h2>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    <li>спагетти</li>
+                    <li>варено-копчёная грудинка</li>
+                    <li>пармезан</li>
+                    <li>2 желтка</li>
+                    <li>соль, чёрный молотый перец, базилик по желанию</li>
+                </ul>
+                <h3>Приготовление:</h3>
+                <p>Грудинку нарежьте и обжарьте до румяности. Спагетти отварите чуть меньше времени на упаковке, сохранив стакан воды от варки.</p>
+                <p>Желтки смешайте с тёртым пармезаном и перцем. Снимите сковороду с огня, добавьте пасту к грудинке, влейте желтковую смесь и разведите горячей водой от пасты до кремовой текстуры — желтки «дойдут» от тепла, но не свернутся.</p>
+                <button class="back-btn nav-btn" data-target="home">← Назад</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
